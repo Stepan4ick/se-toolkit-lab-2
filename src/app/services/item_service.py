@@ -220,6 +220,7 @@ def get_item_by_id_dfs_iterative(
                 counter += 1
                 if course.id == item_id:
                     return FoundItem(course, counter)
+                
  
                 for lab in course.labs:
                     counter += 1
@@ -228,7 +229,7 @@ def get_item_by_id_dfs_iterative(
 
                     for task in lab.tasks:
                         counter += 1
-                        if lab.id == item_id:
+                        if task.id == item_id:
                             return FoundItem(task, counter)
 
                         for step in task.steps:
